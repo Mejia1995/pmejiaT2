@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+    
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pmejiaT2.Vistas.Vprincipal"
+             Title="Vprincipal">
+    <ScrollView>
+        <VerticalStackLayout>
+        <Label/>
+        <Label 
+            Text="Sistema de calificaciones de la uisrael!"
+            TextColor="Green"
+            FontSize="24"
+            HorizontalTextAlignment="Center"/>
+
+        <Image Source="https://univercimas.com/wp-content/uploads/2021/05/Logo-de-la-Universidad-Tecnologica-Israel-UTI.png"
+               HeightRequest="80"/>
+
+            <Picker x:Name="pkEstudiantes" Title="Estudiantes" FontSize="20"  >
+                <Picker.Items>
+                <x:String>Pedro</x:String>
+                <x:String>Juan</x:String>
+                <x:String>Alexandra</x:String>
+                <x:String>Tania</x:String>
+                <x:String>Jorge</x:String>
+            </Picker.Items>
+        </Picker>
+        
+            <Label
+             Text="Parcial 1"
+                 TextColor="Green"
+                  HorizontalTextAlignment="Center"
+                     Style="{StaticResource Headline}"
+                     FontSize="20" />
+
+            <Entry x:Name="txtSeguimiento"
+                             Placeholder="Nota Seguiento 1"
+                                 Keyboard="Numeric"
+                                />
+
+            <Entry x:Name="txtExamel"
+                              Placeholder="Examen Nota 1"
+                                    Keyboard="Numeric"/>
+
+                             <Label 
+                              Text="Suma Parcial 1"
+                              x:Name="lblsuma1"
+                             FontSize="20"
+                             TextColor="Black"  Padding="20"/>
+            
+                            <Label
+                             Text="Parcial 2"
+                            TextColor="Green"
+                             HorizontalTextAlignment="Center"
+                             Style="{StaticResource Headline}"
+                              FontSize="20" />
+
+                            <Entry x:Name="txtSeguimiento2"
+                             Placeholder="Nota Seguimiento2"
+                             Keyboard="Numeric"/>
+
+                             <Entry x:Name="txtExamel2"
+                              Placeholder="Nota Examen2"
+                              Keyboard="Numeric"/>
+
+                            <Label 
+                             Text="Suma Parcial 2"
+                             x:Name="lblsuma2"
+                            FontSize="20"
+                            TextColor="Black"/>
+            <Label/>
+            <Label Text="---------------------------------------------------------------"/>
+
+                            <Label 
+                            Text="Suma Final"
+                            x:Name="lblsumafinal"
+                            FontSize="20"   
+                            TextColor="Black"
+                                Padding="10
+                                "/>
+            <Label/>
+            
+            <Label Text="------------------------------------------------"/>
+            <Button x:Name="btncalculo1"
+                    Text="Ver Resultados"
+                    Clicked="btncalculo1_Clicked"
+            WidthRequest="100" HeightRequest="60" 
+            FontSize="10"  />
+           
+
+            <DatePicker x:Name="dpFechas" 
+                    Format="MM-dd-yyyy"
+                     />
+
+        <Label x:Name="lblFechas"
+               FontSize="20"
+               TextColor="Red"/>
+
+
+                            <Label 
+                   Text="Estado"
+                   x:Name="lblestadofinal"
+                   FontSize="20"   
+      
+                   TextColor="Black"
+                       Padding="10"/>
+       
+            
+        </VerticalStackLayout>
+        </ScrollView>
+</ContentPage>
